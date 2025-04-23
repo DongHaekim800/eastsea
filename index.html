@@ -7,16 +7,12 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100dvh;        /* ✅ 동적 높이로 모바일 대응 */
-      overflow: hidden;      /* ✅ 스크롤 완전 제거 */
+      height: 100dvh;         /* 모든 기기에서 화면 높이에 맞춤 */
+      overflow: hidden;       /* 스크롤 제거 */
     }
 
     body {
-      background-image: url("eastsea-pc.png");       /* 💻 PC 전용 배경 (고양이 일러스트) */
-      background-size: 80%;                          /* 비율 줄이기 */
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background: url("eastsea-background.png") center center / cover no-repeat fixed;
       background-color: #000;
       font-family: 'Nanum Gothic', sans-serif;
       color: #fff;
@@ -24,7 +20,7 @@
     }
 
     .content {
-      padding: 40px 20px 0 20px;  /* 텍스트를 상단에 위치시키되 여백 부여 */
+      padding: 40px 20px 0 20px;
       text-align: center;
     }
 
@@ -35,32 +31,6 @@
 
     p {
       font-size: 1.1em;
-    }
-
-    /* 📱 모바일 전용 설정 */
-    @media screen and (max-width: 768px) {
-      html, body {
-        height: 100dvh;
-        overflow: hidden;
-      }
-
-      body {
-        background-image: none !important;
-        background: url("eastsea-background.png") center top / contain no-repeat scroll !important;
-        background-color: #000 !important;
-      }
-
-      .content {
-        padding-top: 20vh;
-      }
-
-      h1 {
-        font-size: 2em;
-      }
-
-      p {
-        font-size: 1em;
-      }
     }
   </style>
 </head>
