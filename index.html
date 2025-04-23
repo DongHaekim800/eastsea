@@ -13,8 +13,8 @@
     body {
       background-image: url("eastsea-background.png");
       background-size: cover;
+      background-position: center 25%; /* PC에서는 이미지 아래로 조금 내리기 */
       background-repeat: no-repeat;
-      background-position: center top;
       background-attachment: fixed;
       background-color: #000;
       font-family: 'Nanum Gothic', sans-serif;
@@ -25,6 +25,7 @@
     .content {
       padding: 40px;
       text-align: center;
+      margin-top: 35vh; /* 텍스트를 이미지 하단부에 맞게 내리기 */
     }
 
     h1 {
@@ -43,6 +44,9 @@
         background-position: center top;
         background-repeat: no-repeat;
         background-attachment: scroll;
+      }
+      .content {
+        margin-top: 20vh; /* 모바일에선 너무 내려가지 않도록 조정 */
       }
     }
   </style>
