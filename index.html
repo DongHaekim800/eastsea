@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,10 +13,10 @@
 
     body {
       background-image: url("eastsea-background.png");
-      background-size: cover;
-      background-position: center 50%; /* PC에서는 이미지 아래로 조금 내리기 */
+      background-size: 100% auto;              /* 가로 100%, 세로 비율대로 */
+      background-position: center top;
       background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-attachment: scroll;           /* 고정된 배경 제거 (필요시 fixed로 복귀 가능) */
       background-color: #000;
       font-family: 'Nanum Gothic', sans-serif;
       color: #fff;
@@ -25,16 +26,7 @@
     .content {
       padding: 40px;
       text-align: center;
-      margin-top: 40vh; /* 텍스트를 이미지 하단부에 맞게 내리기 */
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2em;
+      margin-top: 35vh; /* 화면 중앙쯤으로 텍스트 이동 */
     }
 
     /* 모바일 대응 */
@@ -45,8 +37,9 @@
         background-repeat: no-repeat;
         background-attachment: scroll;
       }
+
       .content {
-        margin-top: 20vh; /* 모바일에선 너무 내려가지 않도록 조정 */
+        margin-top: 20vh;
       }
     }
   </style>
