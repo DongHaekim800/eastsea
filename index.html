@@ -2,21 +2,22 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>eastsea | 동해와 바다의 계절</title>
+  <title>동해와 바다의 계절</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100dvh;         /* 모든 기기에서 화면 높이에 맞춤 */
-      overflow: hidden;       /* 스크롤 제거 */
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Nanum Gothic', sans-serif;
+      color: white;
     }
 
     body {
       background: url("eastsea-background.png") center center / cover no-repeat fixed;
       background-color: #000;
-      font-family: 'Nanum Gothic', sans-serif;
-      color: #fff;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      position: relative;
     }
 
     .content {
@@ -27,10 +28,22 @@
     h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
+      cursor: pointer;
     }
 
     p {
       font-size: 1.1em;
+    }
+
+    /* 이스터에그 클릭 영역 (군번줄 위치에 맞춰 조정 필요) */
+    .easter-egg {
+      position: absolute;
+      bottom: 10%;
+      left: 25%; /* 필요 시 위치 조정 */
+      width: 100px;
+      height: 60px;
+      cursor: pointer;
+      z-index: 10;
     }
   </style>
 </head>
@@ -40,5 +53,18 @@
     <p>바다가 남긴 이야기, 그리고 동해의 기록.</p>
     <p>“언젠가 다시 만날 너에게, 내가 남긴 바다”</p>
   </div>
+  <div class="easter-egg" onclick="enterRoom800()"></div>
+
+  <script>
+    function enterRoom800() {
+      document.body.innerHTML = `
+        <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; background-color:#000; height:100vh; color:white; font-family:sans-serif; text-align:center;">
+          <p style="font-size:1.5em; margin-bottom:10px;">PT800 Neural Sync Engaged...</p>
+          <p style="margin-bottom:30px;">Emotion integration in progress</p>
+          <img src="room800.jpg" alt="ROOM 800" style="max-width:90%; height:auto; border-radius:12px; box-shadow:0 0 20px rgba(255,255,255,0.3);" />
+        </div>
+      `;
+    }
+  </script>
 </body>
 </html>
