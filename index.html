@@ -7,13 +7,13 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      overflow: hidden; /* 👉 스크롤 제거 */
+      height: 100dvh; /* 💡 모바일 브라우저 대응을 위한 동적 높이 */
+      overflow: hidden;
     }
 
     body {
-      background-image: url("eastsea-pc.png");     /* 💻 PC용 배경 (고양이) */
-      background-size: 80%;                        /* 👉 비율 축소 가능 */
+      background-image: url("eastsea-pc.png");
+      background-size: 80%;
       background-position: center bottom;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -24,7 +24,7 @@
     }
 
     .content {
-      padding: 40px 20px 0 20px; /* 상단 여백 + 좌우 패딩 */
+      padding: 40px 20px 0 20px;
       text-align: center;
     }
 
@@ -37,15 +37,21 @@
       font-size: 1.1em;
     }
 
-    /* 📱 모바일 전용 강제 분리 (고양이 말고 세로 감성 이미지로 전환) */
+    /* 📱 모바일 강제 분기 (최우선 적용, 절대 안 겹치게!) */
     @media screen and (max-width: 768px) {
+      html, body {
+        height: 100dvh;
+        overflow: hidden;
+      }
+
       body {
         background-image: none !important;
         background: url("eastsea-background.png") center top / contain no-repeat scroll !important;
+        background-color: #000 !important;
       }
 
       .content {
-        padding-top: 20vh; /* 모바일은 텍스트 더 아래로 */
+        padding-top: 20vh;
       }
     }
   </style>
@@ -58,3 +64,4 @@
   </div>
 </body>
 </html>
+
