@@ -12,11 +12,11 @@
 
     body {
       background-image: url("eastsea-background.png");
-      background-size: contain;               /* 비율 유지하며 전체 보이게 */
+      background-size: cover;
       background-repeat: no-repeat;
-      background-position: center center;     /* 화면 중앙에 고정 */
-      background-attachment: fixed;           /* 스크롤 시 배경 고정 */
-      background-color: #000;                 /* 혹시 여백 생길 경우 배경 어둡게 */
+      background-position: center top;
+      background-attachment: fixed;
+      background-color: #000;
       font-family: 'Nanum Gothic', sans-serif;
       color: #fff;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
@@ -34,6 +34,16 @@
 
     p {
       font-size: 1.2em;
+    }
+
+    /* 모바일 대응 */
+    @media (max-width: 768px) {
+      body {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
     }
   </style>
 </head>
