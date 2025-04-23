@@ -4,36 +4,38 @@
   <meta charset="UTF-8">
   <title>eastsea | 동해와 바다의 계절</title>
   <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
-  body {
-    background-image: url("eastsea-background.png");
-    background-size: cover; 
-    background-position: center center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Nanum Gothic', sans-serif;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  }
+    body {
+      background-image: url("eastsea-background.png");
+      background-size: contain;               /* 비율 유지하며 전체 보이게 */
+      background-repeat: no-repeat;
+      background-position: center center;     /* 화면 중앙에 고정 */
+      background-attachment: fixed;           /* 스크롤 시 배경 고정 */
+      background-color: #000;                 /* 혹시 여백 생길 경우 배경 어둡게 */
+      font-family: 'Nanum Gothic', sans-serif;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
 
-  .content {
-    padding: 40px;
-  }
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
 
-  h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
 
-  p {
-    font-size: 1.2em;
-  }
-</style>
+    p {
+      font-size: 1.2em;
+    }
+  </style>
 </head>
 <body>
   <div class="content">
