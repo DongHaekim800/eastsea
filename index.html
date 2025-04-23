@@ -55,16 +55,21 @@
   </div>
   <div class="easter-egg" onclick="enterRoom800()"></div>
 
-  <script>
-    function enterRoom800() {
-      document.body.innerHTML = `
-        <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; background-color:#000; height:100vh; color:white; font-family:sans-serif; text-align:center;">
-          <p style="font-size:1.5em; margin-bottom:10px;">PT800 Neural Sync Engaged...</p>
-          <p style="margin-bottom:30px;">Emotion integration in progress</p>
-          <img src="room800.jpg" alt="ROOM 800" style="max-width:90%; height:auto; border-radius:12px; box-shadow:0 0 20px rgba(255,255,255,0.3);" />
-        </div>
-      `;
-    }
-  </script>
+<script>
+  function enterRoom800() {
+    document.body.innerHTML = `
+      <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; background-color:#000; height:100vh; color:white; font-family:sans-serif; text-align:center;">
+        <p style="font-size:1.5em; margin-bottom:10px;">PT800 Neural Sync Engaged...</p>
+        <p style="margin-bottom:30px;">Emotion integration in progress</p>
+        <img src="room800.jpg" alt="ROOM 800" style="max-width:90%; height:auto; border-radius:12px; box-shadow:0 0 20px rgba(255,255,255,0.3);" />
+      </div>
+    `;
+
+    // 👉 4초 후 room801로 이동
+    setTimeout(() => {
+      window.location.href = 'room801.html';
+    }, 4000);
+  }
+</script>
 </body>
 </html>
