@@ -14,6 +14,7 @@
       background: url("room801.png") center center / cover no-repeat fixed;
       background-color: #000;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      position: relative;
     }
 
     .text {
@@ -24,6 +25,21 @@
       font-size: 1.3em;
       padding: 0 20px;
     }
+
+    .easter-egg-802 {
+      position: absolute;
+      bottom: 26%;
+      left: 11.5%;
+      width: 80px;
+      height: 110px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .easter-egg-802:hover {
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -32,5 +48,13 @@
     나는 그걸 꼭 안고 잤다.<br>
     언젠가 사라질 걸 알면서도.</p>
   </div>
+
+  <div class="easter-egg-802" onclick="goToRoom802()"></div>
+
+  <script>
+    function goToRoom802() {
+      window.location.href = "room802.html";
+    }
+  </script>
 </body>
 </html>
