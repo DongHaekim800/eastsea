@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>ROOM 805 | 빛으로 가는 길</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Nanum Gothic', sans-serif;
+      color: white;
+      background: url("room805.png") center center / cover no-repeat fixed;
+      background-color: #000;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .text {
+      position: absolute;
+      bottom: 5%;
+      width: 100%;
+      text-align: center;
+      font-size: 1.3em;
+      padding: 0 20px;
+    }
+
+    .room-number {
+      margin-top: 30px;
+      font-size: 1.6em;
+      letter-spacing: 2px;
+    }
+
+    .easter-egg-next {
+      position: absolute;
+      top: 12%;
+      left: 75%;
+      width: 12%;
+      height: 18%;
+      cursor: pointer;
+      z-index: 999;
+      background: rgba(255, 0, 0, 0.3); /* 테스트용 붉은 배경, 이후 제거 가능 */
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    <p>기억은 태양을 마주 보고 멈춰섰다.<br>
+    지금 이 순간, 너는 어떤 빛으로 나를 떠올릴까.</p>
+    <p class="room-number">ROOM 805</p>
+  </div>
+
+  <div class="easter-egg-next" onclick="goToNext()"></div>
+
+  <script>
+    function goToNext() {
+      window.location.href = "room806.html";  // 또는 엔딩페이지.html
+    }
+  </script>
+</body>
+</html>
