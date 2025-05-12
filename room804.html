@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>ROOM 804 | 바람의 방향</title>
+  <title>ROOM 804 | 두 바퀴 위의 기억</title>
   <style>
     html, body {
       margin: 0;
@@ -31,14 +31,32 @@
       font-size: 1.6em;
       letter-spacing: 2px;
     }
+
+    .easter-egg-805 {
+      position: absolute;
+      top: 38%;   /* 헬멧 상단에 맞춰서 위치 설정 */
+      left: 28%;  /* 왼쪽에 있는 앞 사람 */
+      width: 8%;
+      height: 14%;
+      cursor: pointer;
+      z-index: 999;
+      background: rgba(255, 0, 0, 0.3); /* ← 테스트용 붉은 오버레이 */
+    }
   </style>
 </head>
 <body>
   <div class="text">
-    <p>우리는 같은 방향으로 달리진 않았지만,<br>
-    결국 같은 풍경 앞에 도착했다.<br>
-    바람은 다르지만, 속도는 같았다.</p>
+    <p>두 바퀴 위에 얹은 기억, 커브를 돌 때마다 조금씩 흘러내린다.<br>
+    바람이 지나간 자리에, 우리는 무엇을 남겼을까.</p>
     <p class="room-number">ROOM 804</p>
   </div>
+
+  <div class="easter-egg-805" onclick="goToRoom805()"></div>
+
+  <script>
+    function goToRoom805() {
+      window.location.href = "room805.html";
+    }
+  </script>
 </body>
 </html>
