@@ -31,6 +31,17 @@
       font-size: 1.6em;
       letter-spacing: 2px;
     }
+
+    .easter-egg-803 {
+      position: absolute;
+      bottom: 26%;
+      left: 43%;
+      width: 90px;
+      height: 80px;
+      cursor: pointer;
+      z-index: 999;
+      background: rgba(255, 0, 0, 0.3); /* 확인 후 제거 가능 */
+    }
   </style>
 </head>
 <body>
@@ -40,6 +51,13 @@
     동해와 바다는 서로의 기억이 되었다.</p>
     <p class="room-number">ROOM 802</p>
   </div>
+
+  <div class="easter-egg-803" onclick="goToRoom803()"></div>
+
+  <script>
+    function goToRoom803() {
+      window.location.href = "room803.html";
+    }
+  </script>
 </body>
 </html>
-
