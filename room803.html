@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>ROOM 803 | 바람의 방향</title>
+  <title>ROOM 803 | 커피 한 잔, 기억 한 잔</title>
   <style>
     html, body {
       margin: 0;
@@ -31,14 +31,32 @@
       font-size: 1.6em;
       letter-spacing: 2px;
     }
+
+    .easter-egg-804 {
+      position: absolute;
+      top: 57%;
+      left: 72%;
+      width: 8%;
+      height: 18%;
+      cursor: pointer;
+      z-index: 999;
+      background: rgba(255, 0, 0, 0.3); /* 테스트용 레드 오버레이. 완료 후 삭제 가능 */
+    }
   </style>
 </head>
 <body>
   <div class="text">
-    <p>우리는 같은 방향으로 달리진 않았지만,<br>
-    결국 같은 풍경 앞에 도착했다.<br>
-    바람은 다르지만, 속도는 같았다.</p>
+    <p>첫 서울구경 간날.<br>
+    다음 방으로 가려면 커피 한 잔 들고 와 ☕</p>
     <p class="room-number">ROOM 803</p>
   </div>
+
+  <div class="easter-egg-804" onclick="goToRoom804()"></div>
+
+  <script>
+    function goToRoom804() {
+      window.location.href = "room804.html";
+    }
+  </script>
 </body>
 </html>
